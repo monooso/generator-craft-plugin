@@ -3,10 +3,10 @@ const { toPascalCase } = require('js-convert-case')
 const licenses = require('generator-license').licenses
 
 const staticTemplates = {
-  '_editorconfig': '.editorconfig',
-  '_gitignore': '.gitignore',
+  _editorconfig: '.editorconfig',
+  _gitignore: '.gitignore',
   '_huskyrc.js': '.huskyrc.js',
-  '_nvmrc': '.nvmrc',
+  _nvmrc: '.nvmrc',
   '_php_cs.dist': '.php_cs.dist',
   '_scrutinizer.yml': '.scrutinizer.yml',
   'phpinsights.php': 'phpinsights.php',
@@ -22,7 +22,7 @@ const dynamicTemplates = [
   'README.md',
   'src/Plugin.php',
   'src/models/Settings.php',
-  'templates/settings.twig',
+  'templates/settings.twig'
 ]
 
 const validateString = (value) => {
@@ -152,11 +152,9 @@ module.exports = class extends Generator {
   _copyTemplates () {
     const context = this._templateContext()
 
-    dynamicTemplates.forEach(f => this.fs.copyTpl(
-      this.templatePath(f),
-      this.destinationPath(f),
-      context
-    ))
+    dynamicTemplates.forEach((f) =>
+      this.fs.copyTpl(this.templatePath(f), this.destinationPath(f), context)
+    )
   }
 
   _templateContext () {
