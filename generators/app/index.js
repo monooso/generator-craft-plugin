@@ -168,9 +168,12 @@ module.exports = class extends Generator {
       dateStamp: new Date().toISOString().split('T')[0],
       dateYear: new Date().getUTCFullYear(),
       license: this.props.license,
-      packageDescription: this.props.packageDescription,
       packageName: this.props.packageName,
-      title: this.props.pluginName,
+      pluginDescription: this.props.pluginDescription,
+      pluginHandle: this.props.pluginHandle,
+      pluginName: this.props.pluginName,
+      pluginVersion: this.props.pluginVersion,
+      title: this.props.pluginName
     }
   }
 }
