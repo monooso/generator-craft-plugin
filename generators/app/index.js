@@ -22,7 +22,7 @@ const dynamicTemplates = [
   'README.md',
   'src/Plugin.php',
   'src/models/Settings.php',
-  'templates/settings.twig'
+  'src/templates/settings.twig'
 ]
 
 const validateString = (value) => {
