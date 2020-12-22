@@ -1,6 +1,6 @@
 # Packages
-/node_modules
-/vendor
+node_modules/
+vendor/
 
 # Caches
 .php_cs.cache

@@ -11,7 +11,8 @@ const staticTemplates = {
   '_scrutinizer.yml': '.scrutinizer.yml',
   'phpinsights.php': 'phpinsights.php',
   'src/_gitkeep': 'src/.gitkeep',
-  'tests/_gitkeep': 'tests/.gitkeep'
+  'tests/_gitkeep': 'tests/.gitkeep',
+  'tools/php-cs-fixer/composer.json': 'tools/php-cs-fixer/composer.json'
 }
 
 const dynamicTemplates = [
