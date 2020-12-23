@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace <%= autoloadNamespace %>\models;
+namespace <%= plugin.namespace %>\models;
 
 use craft\base\Model;
 

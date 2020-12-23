@@ -1,27 +1,27 @@
 {
-  "name": "<%= packageName %>",
+  "name": "<%= plugin.package %>",
   "type": "craft-plugin",
-  "description": "<%= pluginDescription %>",
-  "version": "<%= pluginVersion %>",
-  "homepage": "https://github.com/<%= packageName %>",
-  "license": "<%= license %>",
+  "description": "<%= plugin.description %>",
+  "version": "<%= plugin.version %>",
+  "homepage": "https://github.com/<%= plugin.package %>",
+  "license": "<%= plugin.license %>",
   "keywords": [
     "cms",
     "craftcms"
   ],
   "authors": [
     {
-      "name": "<%= authorName %>",
-      "email": "<%= authorEmail %>"<% if (authorWebsite) { %>,
-        "homepage": "<%= authorWebsite %>"<%
+      "name": "<%= author.name %>",
+      "email": "<%= author.email %>"<% if (author.url) { %>,
+        "homepage": "<%= author.url %>"<%
       } %>
     }
   ],
   "support": {
-    "email": "<%= authorEmail %>",
-    "docs": "https://github.com/<%= packageName %>/blob/main/README.md",
-    "issues": "https://github.com/<%= packageName %>/issues?state=open",
-    "source": "https://github.com/<%= packageName %>"
+    "email": "<%= author.email %>",
+    "docs": "https://github.com/<%= plugin.package %>/blob/main/README.md",
+    "issues": "https://github.com/<%= plugin.package %>/issues?state=open",
+    "source": "https://github.com/<%= plugin.package %>"
   },
   "config": {
     "optimize-autoloader": true,
@@ -31,25 +31,23 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^7.4",
-    "craftcms/cms": "^3.5"
+    "php": "^7.4"
   },
   "require-dev": {
-    "nunomaduro/phpinsights": "^1.14",
-    "sebastian/phpcpd": "^6.0.3"
+    "craftcms/cms": "^3.5"
   },
   "autoload": {
     "psr-4": {
-      "<%= autoloadNamespace %>\\": "src/"
+      "<%= plugin.namespace.replace('\\', '\\\\') %>\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "<%= autoloadNamespace %>\\Tests\\": "tests/"
+      "<%= plugin.namespace.replace('\\', '\\\\') %>\\tests\\": "tests/"
     }
   },
   "extra": {
-    "name": "<%= pluginName %>",
-    "handle": "<%= pluginHandle %>"
+    "name": "<%= plugin.name %>",
+    "handle": "<%= plugin.handle %>"
   }
 }

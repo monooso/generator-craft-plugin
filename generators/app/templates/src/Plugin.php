@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace <%= autoloadNamespace %>;
+namespace <%= plugin.namespace %>;
 
 use Craft;
 use craft\base\Plugin as BasePlugin;
 use yii\web\Response;
-use <%= autoloadNamespace %>\models\Settings;
+use <%= plugin.namespace %>\models\Settings;
 
 final class Plugin extends BasePlugin
 {
@@ -41,7 +41,7 @@ final class Plugin extends BasePlugin
     protected function settingsHtml(): Response
     {
         return Craft::$app->getView()->renderTemplate(
-            '<%= pluginHandle %>/settings',
+            '<%= plugin.handle %>/settings',
             ['settings' => $this->getSettings()]
         );
     }

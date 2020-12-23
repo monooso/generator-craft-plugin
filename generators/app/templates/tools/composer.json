@@ -1,0 +1,21 @@
+{
+  "name": "<%= plugin.package %>-tools",
+  "type": "project",
+  "license": "<%= plugin.license %>",
+  "authors": [
+    {
+      "name": "<%= author.name %>",
+      "email": "<%= author.email %>"<% if (author.url) { %>,
+        "homepage": "<%= author.url %>"<%
+      } %>
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+    "codeception/codeception": "^4.1",
+    "friendsofphp/php-cs-fixer": "^2.17",
+    "nunomaduro/phpinsights": "^1.14",
+    "sebastian/phpcpd": "^6.0"
+  }
+}

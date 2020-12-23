@@ -1,22 +1,20 @@
-# <%= title %>
+# <%= plugin.name %>
 
 <p>
-  <a href="https://travis-ci.org/<%= packageName %>"><img src="https://img.shields.io/travis/<%= packageName %>/master.svg" alt="Build Status"/></a>
-  <a href="https://scrutinizer-ci.com/g/<%= packageName %>"><img src="https://img.shields.io/scrutinizer/g/<%= packageName %>.svg" alt="Quality Score"/></a>
-  <a href="https://scrutinizer-ci.com/g/<%= packageName %>"><img src="https://img.shields.io/scrutinizer/coverage/g/<%= packageName %>.svg" alt="Coverage"/></a>
-  <a href="https://packagist.org/packages/<%= packageName %>"><img src="https://poser.pugx.org/<%= packageName %>/v/stable.svg" alt="Latest Stable Version"/></a>
-  <a href="https://packagist.org/packages/<%= packageName %>"><img src="https://poser.pugx.org/<%= packageName %>/license.svg" alt="License"/></a>
+  <a href="https://packagist.org/packages/<%= plugin.package %>"><img src="https://poser.pugx.org/<%= plugin.package %>/v/stable.svg" alt="Latest Stable Version"/></a>
+  <a href="https://packagist.org/packages/<%= plugin.package %>"><img src="https://poser.pugx.org/<%= plugin.package %>/license.svg" alt="License"/></a>
 </p>
 
-## About <%= title %>
+## About <%= plugin.name %>
+<%= plugin.description %>
 
 ## Requirements and installation
-<%= title %> requires ...
+<%= plugin.name %> requires ...
 
-Install <%= title %> using [Composer](https://getcomposer.org/):
+Install <%= plugin.name %> using [Composer](https://getcomposer.org/):
 
 ```bash
-composer require <%= packageName %>
+composer require <%= plugin.package %>
 ```
 
 ## Usage

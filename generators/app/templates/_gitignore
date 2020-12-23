@@ -5,7 +5,7 @@ vendor/
 # Caches
 .php_cs.cache
 
-# Configuration
+# Local configuration
 .env
 .php_cs
 .yo-rc.json
