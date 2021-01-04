@@ -4,7 +4,7 @@
   "description": "<%= plugin.description %>",
   "version": "<%= plugin.version %>",
   "homepage": "https://github.com/<%= plugin.package %>",
-  "license": "<%= plugin.license %>",
+  "license": "<%= plugin.license === 'UNLICENSED' ? 'proprietary' : plugin.license %>",
   "keywords": [
     "cms",
     "craftcms"
