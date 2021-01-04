@@ -10,6 +10,8 @@ const staticTemplates = {
   '_php_cs.dist': ['.php_cs', '.php_cs.dist'],
   'phpinsights.php': 'phpinsights.php',
   'src/_gitkeep': 'src/.gitkeep',
+  'src/icon.svg': 'src/icon.svg',
+  'src/icon-mask.svg': 'src/icon-mask.svg',
   'tests/_gitkeep': 'tests/.gitkeep'
 }
 
