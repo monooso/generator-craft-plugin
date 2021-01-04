@@ -154,6 +154,8 @@ module.exports = class extends Generator {
   }
 
   _templateContext () {
+    const safeHandle = this.props.pluginHandle.replace(/[_-]/, '').toLowerCase()
+
     return {
       author: {
         name: this.props.authorName,
@@ -164,7 +166,7 @@ module.exports = class extends Generator {
         name: this.props.pluginName,
         handle: this.props.pluginHandle,
         description: this.props.pluginDescription,
-        namespace: `${this.props.pluginNamespace}\\${this.props.pluginHandle}`,
+        namespace: `${this.props.pluginNamespace}\\${safeHandle}`,
         package: this.props.pluginPackage,
         license: this.props.pluginLicense,
         version: this.props.pluginVersion
