@@ -11,7 +11,7 @@ use <%= plugin.namespace %>\models\Settings;
 
 final class <%= plugin.class %> extends Plugin
 {
-    public bool $hasCpSettings = true;
+    public $hasCpSettings = true;
 
     /**
      * Initialise the plugin
