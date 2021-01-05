@@ -1,7 +1,7 @@
 {
   "name": "<%= plugin.package %>-tools",
   "type": "project",
-  "license": "<%= plugin.license %>",
+  "license": "<%= plugin.license === 'UNLICENSED' ? 'proprietary' : plugin.license %>",
   "authors": [
     {
       "name": "<%= author.name %>",
