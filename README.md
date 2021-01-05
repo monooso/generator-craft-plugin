@@ -3,24 +3,7 @@
 [![NPM Version](https://img.shields.io/npm/v/@monooso/generator-craft-plugin.svg)](https://www.npmjs.org/package/@monooso/generator-craft-plugin)
 
 ## Overview
-Yeoman generator for scaffolding a Craft 3 plugin. Generates the following files, based on the information you provide:
-
-- `src/.gitkeep`
-- `tests/.gitkeep`
-- `.editorconfig`
-- `.gitignore`
-- `.huskyrc.js`
-- `.nvmrc`
-- `.php_cs.dist`
-- `.scrutinizer.yml`
-- `.travis.yml`
-- `CHANGELOG.md`
-- `composer.json`
-- `LICENSE.txt`
-- `package.json`
-- `phpinsights.php`
-- `phpunit.xml`
-- `README.md`
+Yeoman generator for scaffolding a Craft 3 plugin.
 
 ## Installation
 Install [Yeoman](https://yeoman.io) and this package using [npm](https://npmjs.com).
