@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace <%= plugin.namespace %>;
 
 use Craft;
-use craft\base\Plugin as BasePlugin;
+use craft\base\Plugin;
 use yii\web\Response;
 use <%= plugin.namespace %>\models\Settings;
 
-final class Plugin extends BasePlugin
+final class <%= plugin.class %> extends Plugin
 {
     public bool $hasCpSettings = true;
 

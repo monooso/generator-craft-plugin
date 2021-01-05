@@ -1,5 +1,6 @@
 const Generator = require('yeoman-generator')
-const { toSnakeCase } = require('js-convert-case')
+const { toSnakeCase, toPascalCase } = require('js-convert-case')
+const ejs = require('ejs')
 const licenses = require('generator-license').licenses
 
 const staticTemplates = {
@@ -21,7 +22,7 @@ const dynamicTemplates = {
   'composer.json': 'composer.json',
   'package.json': 'package.json',
   'README.md': 'README.md',
-  'src/Plugin.php': 'src/Plugin.php',
+  'src/Plugin.php': 'src/<%= plugin.class %>.php',
   'src/models/Settings.php': 'src/models/Settings.php',
   'src/templates/settings.twig': 'src/templates/settings.twig',
   'tools/composer.json': 'tools/composer.json'
@@ -148,7 +149,9 @@ module.exports = class extends Generator {
 
     for (const [from, to] of Object.entries(dynamicTemplates)) {
       this._ensureArray(to).forEach((t) => {
-        this.fs.copyTpl(this.templatePath(from), this.destinationPath(t), context)
+        // Process placeholders in destination filename
+        const parsedTo = ejs.render(t, context)
+        this.fs.copyTpl(this.templatePath(from), this.destinationPath(parsedTo), context)
       })
     }
   }
@@ -163,6 +166,7 @@ module.exports = class extends Generator {
         url: this.props.authorUrl
       },
       plugin: {
+        class: toPascalCase(this.props.pluginHandle),
         name: this.props.pluginName,
         handle: this.props.pluginHandle,
         description: this.props.pluginDescription,
