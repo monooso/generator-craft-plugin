@@ -36,9 +36,9 @@ final class <%= plugin.class %> extends Plugin
     /**
      * Renders the settings HTML
      *
-     * @return Response
+     * @return string
      */
-    protected function settingsHtml(): Response
+    protected function settingsHtml(): string
     {
         return Craft::$app->getView()->renderTemplate(
             '<%= plugin.handle %>/settings',
