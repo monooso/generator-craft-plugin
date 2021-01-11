@@ -31,7 +31,8 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^7.4"
+    "php": "^7.4",
+    "putyourlightson/craft-log-to-file": "^1.2"
   },
   "require-dev": {
     "codeception/codeception": "^4.1",
