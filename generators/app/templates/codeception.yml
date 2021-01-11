@@ -5,8 +5,7 @@ paths:
   data: tests/_data
   support: tests/_support
   envs: tests/_envs
-settings:
-  bootstrap: _bootstrap.php
+bootstrap: _bootstrap.php
 coverage:
   enabled: true
   include:
@@ -23,18 +22,22 @@ coverage:
     - vendor/*
 params:
   - tests/.env
+extensions:
+  config:
+    \Monooso\Bolt\BoltExtension:
+      dump: "bolt:3.5"
 modules:
   config:
-    \craft\test\Craft:
+    \Monooso\Bolt\BoltModule:
       configFile: "tests/_craft/config/test.php"
       entryUrl: "http://<%= plugin.handle %>.test/index.php"
       projectConfig: {}
       migrations: []
       plugins:
         <%= plugin.handle %>:
-          class: '\\<%= plugin.namespace %>\\Plugin'
+          class: "\\<%= plugin.namespace.replace('\\', '\\\\') %>\\<%= plugin.class %>"
           handle: <%= plugin.handle %>
       cleanup: true
       transaction: true
-      dbSetup: { clean: true, setupCraft: true }
+      dbSetup: { clean: false, setupCraft: false }
       fullMock: false

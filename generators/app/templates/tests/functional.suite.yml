@@ -1,0 +1,6 @@
+extensions:
+  enabled:
+    - \Monooso\Bolt\BoltExtension
+modules:
+  enabled:
+    - \Monooso\Bolt\BoltModule

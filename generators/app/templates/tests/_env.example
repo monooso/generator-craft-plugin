@@ -1,0 +1,11 @@
+# Application
+SECURITY_KEY=
+PRIMARY_SITE_URL=http://<%= plugin.handle %>.test/index.php
+
+# Database
+DB_DRIVER=mysql
+DB_SERVER=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=<%= plugin.handle.replace('-', '_') %>_test
+DB_USER=root
+DB_PASSWORD=password

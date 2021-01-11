@@ -13,7 +13,15 @@ const staticTemplates = {
   'src/_gitkeep': 'src/.gitkeep',
   'src/icon.svg': 'src/icon.svg',
   'src/icon-mask.svg': 'src/icon-mask.svg',
-  'tests/_gitkeep': 'tests/.gitkeep'
+  'tests/_bootstrap.php': 'tests/_bootstrap.php',
+  'tests/_craft': 'tests/_craft',
+  'tests/_gitignore': 'tests/.gitignore',
+  'tests/acceptance': 'tests/acceptance',
+  'tests/acceptance.suite.yml': 'tests/acceptance.suite.yml',
+  'tests/functional.suite.yml': 'tests/functional.suite.yml',
+  'tests/functional': 'tests/functional',
+  'tests/unit.suite.yml': 'tests/unit.suite.yml',
+  'tests/unit': 'tests/unit'
 }
 
 const dynamicTemplates = {
@@ -25,6 +33,7 @@ const dynamicTemplates = {
   'src/Plugin.php': 'src/<%= plugin.class %>.php',
   'src/models/Settings.php': 'src/models/Settings.php',
   'src/templates/settings.twig': 'src/templates/settings.twig',
+  'tests/_env.example': 'tests/.env.example',
   'tools/composer.json': 'tools/composer.json'
 }
 
