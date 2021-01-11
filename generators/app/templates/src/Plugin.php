@@ -6,7 +6,6 @@ namespace <%= plugin.namespace %>;
 
 use Craft;
 use craft\base\Plugin;
-use yii\web\Response;
 use <%= plugin.namespace %>\models\Settings;
 
 final class <%= plugin.class %> extends Plugin
